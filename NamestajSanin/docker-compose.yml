@@ -1,0 +1,41 @@
+﻿version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:10.6
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: lozinka
+      MYSQL_DATABASE: namestajdb
+    ports:
+      - "3306:3306"
+    command: --bind-address=0.0.0.0
+    networks:
+      - app-network
+
+  namestajsanin-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    networks:
+      - app-network
+    depends_on:
+      - mariadb
+
+  ef-cli:
+    image: mcr.microsoft.com/dotnet/sdk:8.0
+    container_name: ef-cli
+    working_dir: /app/NamestajSanin
+    volumes:
+      - .:/app
+    entrypoint: ["tail", "-f", "/dev/null"]
+    networks:
+      - app-network
+    depends_on:
+      - mariadb
+
+networks:
+  app-network:
+    driver: bridge
