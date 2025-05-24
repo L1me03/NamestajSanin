@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\models\\narudzba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:models\\narudzba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\models\\zadatak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:models\\zadatak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\models\\zaposleni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:models\\zaposleni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\models\\faza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:models\\faza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\models\\zaposleni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:models\\zaposleni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\models\\narudzba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:models\\narudzba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\models\\zadatak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:models\\zadatak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\models\\faza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:models\\faza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\migrations\\20250524174747_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\migrations\\20250524222023_initalcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:migrations\\20250524222023_initalcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|solutionrelative:migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A4FA260-2D18-DF80-B709-29E15D0F5373}|NamestajSanin.csproj|c:\\users\\lenovo\\documents\\namestajsanin\\namestajsanin\\data\\appdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,71 +67,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAswC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T22:44:11.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Zaposleni.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Models\\Zaposleni.cs",
-              "RelativeDocumentMoniker": "Models\\Zaposleni.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Models\\Zaposleni.cs",
-              "RelativeToolTip": "Models\\Zaposleni.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T22:43:46.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Zadatak.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Models\\Zadatak.cs",
-              "RelativeDocumentMoniker": "Models\\Zadatak.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Models\\Zadatak.cs",
-              "RelativeToolTip": "Models\\Zadatak.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T22:43:10.613Z",
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-24T23:17:09.232Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Faza.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Models\\Faza.cs",
-              "RelativeDocumentMoniker": "Models\\Faza.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Models\\Faza.cs",
-              "RelativeToolTip": "Models\\Faza.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T22:42:47.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Narudzba.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Models\\Narudzba.cs",
               "RelativeDocumentMoniker": "Models\\Narudzba.cs",
               "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Models\\Narudzba.cs",
               "RelativeToolTip": "Models\\Narudzba.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA3wBMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA1wBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T22:42:11.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T22:42:11.613Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
@@ -135,51 +99,11 @@
               "RelativeToolTip": "docker-compose.yml",
               "ViewState": "AgIAABAAAAAAAAAAAAAowCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-05-24T22:22:16.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "20250524174747_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Migrations\\20250524174747_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250524174747_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Migrations\\20250524174747_InitialCreate.cs",
-              "RelativeToolTip": "Migrations\\20250524174747_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T22:22:08.317Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "20250524222023_InitalCreate.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Migrations\\20250524222023_InitalCreate.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250524222023_InitalCreate.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Migrations\\20250524222023_InitalCreate.cs",
-              "RelativeToolTip": "Migrations\\20250524222023_InitalCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T22:22:05.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T22:22:16.762Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T22:08:57.348Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "AppDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Migrations\\AppDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Migrations\\AppDbContextModelSnapshot.cs",
@@ -187,12 +111,95 @@
               "RelativeToolTip": "Migrations\\AppDbContextModelSnapshot.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T22:22:04.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T22:22:04.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAowC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T22:08:57.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Zaposleni.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Models\\Zaposleni.cs",
+              "RelativeDocumentMoniker": "Models\\Zaposleni.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Models\\Zaposleni.cs",
+              "RelativeToolTip": "Models\\Zaposleni.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T22:43:46.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T22:44:11.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Faza.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Models\\Faza.cs",
+              "RelativeDocumentMoniker": "Models\\Faza.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Models\\Faza.cs",
+              "RelativeToolTip": "Models\\Faza.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T22:42:47.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Zadatak.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Models\\Zadatak.cs",
+              "RelativeDocumentMoniker": "Models\\Zadatak.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Models\\Zadatak.cs",
+              "RelativeToolTip": "Models\\Zadatak.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T22:43:10.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20250524174747_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Migrations\\20250524174747_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250524174747_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Migrations\\20250524174747_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20250524174747_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T22:22:08.317Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "20250524222023_InitalCreate.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Migrations\\20250524222023_InitalCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250524222023_InitalCreate.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Migrations\\20250524222023_InitalCreate.cs",
+              "RelativeToolTip": "Migrations\\20250524222023_InitalCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T22:22:05.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "AppDbContextFactory.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Data\\AppDbContextFactory.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContextFactory.cs",
@@ -200,12 +207,11 @@
               "RelativeToolTip": "Data\\AppDbContextFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T20:54:53.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T20:54:53.308Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",

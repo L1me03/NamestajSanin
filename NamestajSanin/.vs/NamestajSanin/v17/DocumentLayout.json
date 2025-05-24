@@ -72,7 +72,7 @@
               "RelativeDocumentMoniker": "Dockerfile",
               "ToolTip": "C:\\Users\\LENOVO\\Documents\\NamestajSanin\\NamestajSanin\\Dockerfile",
               "RelativeToolTip": "Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-05-24T23:17:09.232Z",
               "EditorCaption": ""
@@ -87,8 +87,7 @@
               "RelativeToolTip": "Models\\Narudzba.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAA1wBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T22:42:11.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T22:42:11.613Z"
             },
             {
               "$type": "Document",
@@ -100,8 +99,7 @@
               "RelativeToolTip": "docker-compose.yml",
               "ViewState": "AgIAABAAAAAAAAAAAAAowCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-05-24T22:22:16.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T22:22:16.762Z"
             },
             {
               "$type": "Document",
@@ -113,8 +111,7 @@
               "RelativeToolTip": "Migrations\\AppDbContextModelSnapshot.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T22:22:04.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T22:22:04.014Z"
             },
             {
               "$type": "Document",
@@ -126,8 +123,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAowC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T22:08:57.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T22:08:57.348Z"
             },
             {
               "$type": "Document",
@@ -139,8 +135,7 @@
               "RelativeToolTip": "Models\\Zaposleni.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T22:43:46.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T22:43:46.546Z"
             },
             {
               "$type": "Document",
@@ -152,8 +147,7 @@
               "RelativeToolTip": "Data\\AppDbContext.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T22:44:11.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T22:44:11.589Z"
             },
             {
               "$type": "Document",
