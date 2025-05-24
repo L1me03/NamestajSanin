@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "MyIwTWefJ0KjGBV/Vi3FkXteVojuqilZgqJSQ/4jl7M=",
-  "Source": "NamestajSanin",
-  "BasePath": "_content/NamestajSanin",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"WkUPsFHp+g0MW1bkUJS0vIkUl4bXJOMG99olg0ejgHM=","Source":"NamestajSanin","BasePath":"_content/NamestajSanin","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
