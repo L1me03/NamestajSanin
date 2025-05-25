@@ -19,7 +19,8 @@ namespace NamestajSanin.Models
 
         [Required]
         public string Materijal { get; set; }
-
+        
+        [Required]
         public string? Boja { get; set; }
 
         [Required]

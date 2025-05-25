@@ -21,5 +21,7 @@ namespace NamestajSanin.Models
         // Relacija prema Narudzbi
         public int NarudzbaId { get; set; }
         public Narudzba? Narudzba { get; set; }
+
+        public List<Zadatak>? Zadaci { get; set; } = new();
     }
 }
