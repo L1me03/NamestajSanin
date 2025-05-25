@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NamestajSanin.Models;
+using NamestajSanin.Enums; // važno za enum PozicijaTip
 
 namespace NamestajSanin.Data
 {
@@ -10,13 +11,11 @@ namespace NamestajSanin.Data
         {
         }
 
-        //DB setovi
         public DbSet<Narudzba> Narudzbe { get; set; }
         public DbSet<Faza> Faze { get; set; }
         public DbSet<Zadatak> Zadaci { get; set; }
         public DbSet<Zaposleni> Zaposleni { get; set; }
 
-        //Relacije
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -41,6 +40,11 @@ namespace NamestajSanin.Data
                 .WithMany(zp => zp.Zadaci)
                 .HasForeignKey(z => z.ZaposleniId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            // Enum konverzija: Zaposleni.Pozicija (PozicijaTip enum)
+            modelBuilder.Entity<Zaposleni>()
+                .Property(z => z.Pozicija)
+                .HasConversion<string>();
         }
     }
 }
