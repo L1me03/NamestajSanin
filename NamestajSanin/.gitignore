@@ -1,8 +1,13 @@
+# .gitignore za .NET projekte
 .vs/
 bin/
 obj/
 *.user
 *.suo
-*.cache
+*.pdb
 *.db
+*.log
+*.cache
+*.vsidx
+*.DS_Store
 *.vscode/
