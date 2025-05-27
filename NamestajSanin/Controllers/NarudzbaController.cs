@@ -3,20 +3,22 @@ using Microsoft.EntityFrameworkCore;
 using NamestajSanin.Data;
 using NamestajSanin.Models;
 using NamestajSanin.Models.DTOs;
+using NamestajSanin.Services;
 
 namespace NamestajSanin.Controllers
 {
-
     // API kontroler za upravljanje narudzbama (za klijenta i menadzera)
     [ApiController]
     [Route("api/[controller]")]
     public class NarudzbaController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly StatusService _statusService;
 
-        public NarudzbaController(AppDbContext context)
+        public NarudzbaController(AppDbContext context, StatusService statusService)
         {
             _context = context;
+            _statusService = statusService;
         }
 
         // Pregled svih narudzbi sa fazama (za menadzera)
@@ -26,13 +28,11 @@ namespace NamestajSanin.Controllers
             var narudzbe = await _context.Narudzbe.Include(n => n.Faze).ToListAsync();
 
             // Preračunaj status i dane do završetka
-            foreach (var n in narudzbe)
-                AzurirajStatusINarudzbe(n);
+            narudzbe.ForEach(n => _statusService.AzurirajStatusNarudzbe(n));
 
             return narudzbe;
         }
 
-           
         // Dohvacanje jedne narudzbe za menadzera po ID-u 
         [HttpGet("{id}")]
         public async Task<ActionResult<Narudzba>> GetNarudzba(int id)
@@ -42,10 +42,9 @@ namespace NamestajSanin.Controllers
             if (narudzba == null)
                 return NotFound();
 
-            AzurirajStatusINarudzbe(narudzba);
+            _statusService.AzurirajStatusNarudzbe(narudzba);
             return narudzba;
         }
-
 
         // Kreiranje narudzbe za klijente
         [HttpPost]
@@ -56,41 +55,17 @@ namespace NamestajSanin.Controllers
             return CreatedAtAction(nameof(GetNarudzba), new { id = narudzba.Id }, narudzba);
         }
 
-        // Azuriranje statusa narudzbe uz pomoc faze, sinhronizacija statusa izmedju Faza.cs i Narudzba.cs
-        private void AzurirajStatusINarudzbe(Narudzba narudzba)
-        {
-            if (narudzba.Faze == null || narudzba.Faze.Count == 0)
-            {
-                narudzba.Status = "nije_poceto";
-                return;
-            }
-
-            bool sveZavrsene = narudzba.Faze.All(f => f.Status == "zavrsena");
-            bool nekeUToku = narudzba.Faze.Any(f => f.Status == "u_toku");
-
-            if (sveZavrsene)
-                narudzba.Status = "zavrsena";
-            else if (nekeUToku)
-                narudzba.Status = "u_izradi";
-            else
-                narudzba.Status = "nije_poceto";
-
-            _context.SaveChanges(); // ažurira bazu
-        }
-
-
-        // Pregled statusa narudzbe za klijente + poziv metode AzurirajStatusNarudzbe
+        // Pregled statusa narudzbe za klijente + poziv metode StatusService
         [HttpGet("Status/{id}")]
         public async Task<ActionResult<NarudzbaStatusDto>> GetStatus(int id)
         {
-            var narudzba = await _context.Narudzbe
-                .Include(n => n.Faze)
-                .FirstOrDefaultAsync(n => n.Id == id);
+            var narudzba = await _context.Narudzbe.Include(n => n.Faze)
+                                                  .FirstOrDefaultAsync(n => n.Id == id);
 
             if (narudzba == null)
                 return NotFound();
 
-            AzurirajStatusINarudzbe(narudzba);
+            _statusService.AzurirajStatusNarudzbe(narudzba);
 
             var result = new NarudzbaStatusDto
             {
@@ -100,7 +75,5 @@ namespace NamestajSanin.Controllers
 
             return Ok(result);
         }
-
     }
 }
-

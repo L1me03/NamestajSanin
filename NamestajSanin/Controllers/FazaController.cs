@@ -2,20 +2,22 @@
 using Microsoft.EntityFrameworkCore;
 using NamestajSanin.Data;
 using NamestajSanin.Models;
+using NamestajSanin.Services;
 
 namespace NamestajSanin.Controllers
 {
-
-    //Kontroler za upravljanje fazama proizvodnje unutar narudzbi
+    // Kontroler za upravljanje fazama proizvodnje unutar narudzbi
     [ApiController]
     [Route("api/[controller]")]
     public class FazaController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly StatusService _statusService;
 
-        public FazaController(AppDbContext context)
+        public FazaController(AppDbContext context, StatusService statusService)
         {
             _context = context;
+            _statusService = statusService;
         }
 
         // Dohvatanje svih faza u sistemu
@@ -31,15 +33,15 @@ namespace NamestajSanin.Controllers
         {
             return await _context.Faze.Where(f => f.NarudzbaId == narudzbaId).ToListAsync();
         }
-      
-        //Kreiranje nove faze (nakon što menadžer pokrene izradu narudžbe)
-        // Nako dodavanja faze, automatski se ažurira status narudžbe kojoj pripada
+
+        // Kreiranje nove faze (nakon što menadžer pokrene izradu narudžbe)
+        // Nakon dodavanja faze, automatski se ažurira status narudžbe kojoj pripada
         [HttpPost]
         public async Task<ActionResult<Faza>> Create(Faza faza)
         {
             _context.Faze.Add(faza);
             await _context.SaveChangesAsync();
-            await AzurirajStatusNarudzbe(faza.NarudzbaId);
+            await _statusService.AzurirajStatusNarudzbeAsync(faza.NarudzbaId);
             return CreatedAtAction(nameof(GetFaze), new { id = faza.Id }, faza);
         }
 
@@ -52,30 +54,9 @@ namespace NamestajSanin.Controllers
 
             faza.Status = status;
             await _context.SaveChangesAsync();
-            await AzurirajStatusNarudzbe(faza.NarudzbaId);
+            await _statusService.AzurirajStatusNarudzbeAsync(faza.NarudzbaId);
 
             return NoContent();
-        }
-
-        // Sinhronizirana metoda za ažuriranje statusa narudžbe na osnovu faza
-        private async Task AzurirajStatusNarudzbe(int narudzbaId)
-        {
-            var narudzba = await _context.Narudzbe.Include(n => n.Faze)
-                                                  .FirstOrDefaultAsync(n => n.Id == narudzbaId);
-
-            if (narudzba == null) return;
-
-            bool sveZavrsene = narudzba.Faze.All(f => f.Status == "zavrsena");
-            bool nekeUToku = narudzba.Faze.Any(f => f.Status == "u_toku");
-
-            if (sveZavrsene)
-                narudzba.Status = "zavrsena";
-            else if (nekeUToku)
-                narudzba.Status = "u_izradi";
-            else
-                narudzba.Status = "nije_poceto";
-
-            await _context.SaveChangesAsync();
         }
     }
 }
