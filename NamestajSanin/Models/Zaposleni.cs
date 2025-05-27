@@ -17,7 +17,7 @@ namespace NamestajSanin.Models
         [Required]
         public bool IsMenadzer { get; set; } = false;
 
-        [Required]
+      
         public string? Lozinka { get; set; } 
 
     }
