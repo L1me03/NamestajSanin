@@ -14,6 +14,11 @@ namespace NamestajSanin.Models
         public PozicijaTip Pozicija { get; set; } //koristi enum
 
         public List<Zadatak>? Zadaci { get; set; } = new();
+        [Required]
+        public bool IsMenadzer { get; set; } = false;
+
+        [Required]
+        public string? Lozinka { get; set; } 
 
     }
 }

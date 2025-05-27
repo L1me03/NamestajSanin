@@ -56,11 +56,11 @@ namespace NamestajSanin.Data
 
             // Seed podaci: zaposleni
             modelBuilder.Entity<Zaposleni>().HasData(
-                new Zaposleni { Id = 1, Ime = "Sako", Pozicija = PozicijaTip.Tapetar },
-                new Zaposleni { Id = 2, Ime = "Gile", Pozicija = PozicijaTip.Stolar },
-                new Zaposleni { Id = 3, Ime = "Selver", Pozicija = PozicijaTip.Stolar },
-                new Zaposleni { Id = 4, Ime = "Mirzel", Pozicija = PozicijaTip.Tapetar },
-                new Zaposleni { Id = 5, Ime = "Mila", Pozicija = PozicijaTip.Tapetar }
+                new Zaposleni { Id = 1, Ime = "Sako", Pozicija = PozicijaTip.Tapetar, IsMenadzer = true, Lozinka = "SakoNamestaj" },
+                new Zaposleni { Id = 2, Ime = "Gile", Pozicija = PozicijaTip.Stolar , IsMenadzer = true, Lozinka = "GileNamestaj" },
+                new Zaposleni { Id = 3, Ime = "Selver", Pozicija = PozicijaTip.Stolar , IsMenadzer = false},
+                new Zaposleni { Id = 4, Ime = "Mirzel", Pozicija = PozicijaTip.Tapetar ,IsMenadzer = false },
+                new Zaposleni { Id = 5, Ime = "Mila", Pozicija = PozicijaTip.Tapetar ,IsMenadzer = false }
 
             );
 
