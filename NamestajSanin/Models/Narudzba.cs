@@ -63,7 +63,9 @@ namespace NamestajSanin.Models
                     return null;
 
                 var maxDatum = krajnjiDatumi.Max();
-                return (int)(maxDatum - danas).TotalDays;
+                var totalDays = (maxDatum - danas).TotalDays;
+
+                return (int)Math.Ceiling(totalDays); 
             }
         }
     }

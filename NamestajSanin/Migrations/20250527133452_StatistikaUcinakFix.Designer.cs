@@ -12,8 +12,8 @@ using NamestajSanin.Data;
 namespace NamestajSanin.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250527115242_PcMigration13:52")]
-    partial class PcMigration1352
+    [Migration("20250527133452_StatistikaUcinakFix")]
+    partial class StatistikaUcinakFix
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -64,7 +64,7 @@ namespace NamestajSanin.Migrations
                         {
                             Id = 1,
                             NarudzbaId = 1,
-                            Naziv = "Obrada drveta",
+                            Naziv = "Secenje",
                             Redosled = 1,
                             Status = "nije_poceto",
                             Trajanje = 2
@@ -73,7 +73,7 @@ namespace NamestajSanin.Migrations
                         {
                             Id = 2,
                             NarudzbaId = 1,
-                            Naziv = "Farbanje",
+                            Naziv = "Lepljenje",
                             Redosled = 2,
                             Status = "nije_poceto",
                             Trajanje = 1
@@ -82,35 +82,53 @@ namespace NamestajSanin.Migrations
                         {
                             Id = 3,
                             NarudzbaId = 1,
-                            Naziv = "Krojenje",
+                            Naziv = "Sklapanje konstrukcije",
                             Redosled = 3,
                             Status = "nije_poceto",
-                            Trajanje = 1
+                            Trajanje = 2
                         },
                         new
                         {
                             Id = 4,
                             NarudzbaId = 1,
-                            Naziv = "Šivenje",
+                            Naziv = "Farbanje",
                             Redosled = 4,
                             Status = "nije_poceto",
-                            Trajanje = 2
+                            Trajanje = 1
                         },
                         new
                         {
                             Id = 5,
                             NarudzbaId = 1,
-                            Naziv = "Tapaciranje",
+                            Naziv = "Krojenje",
                             Redosled = 5,
                             Status = "nije_poceto",
-                            Trajanje = 2
+                            Trajanje = 1
                         },
                         new
                         {
                             Id = 6,
                             NarudzbaId = 1,
-                            Naziv = "Pakovanje",
+                            Naziv = "Šivenje",
                             Redosled = 6,
+                            Status = "nije_poceto",
+                            Trajanje = 2
+                        },
+                        new
+                        {
+                            Id = 7,
+                            NarudzbaId = 1,
+                            Naziv = "Tapaciranje",
+                            Redosled = 7,
+                            Status = "nije_poceto",
+                            Trajanje = 2
+                        },
+                        new
+                        {
+                            Id = 8,
+                            NarudzbaId = 1,
+                            Naziv = "Pakovanje",
+                            Redosled = 8,
                             Status = "nije_poceto",
                             Trajanje = 1
                         });
@@ -175,7 +193,7 @@ namespace NamestajSanin.Migrations
                         {
                             Id = 1,
                             Boja = "Siva",
-                            Datum = new DateTime(2025, 5, 27, 11, 52, 41, 767, DateTimeKind.Utc).AddTicks(3808),
+                            Datum = new DateTime(2025, 5, 27, 13, 34, 51, 447, DateTimeKind.Utc).AddTicks(1036),
                             Dimenzije = "250x180",
                             Email = "petar@example.com",
                             KontaktIme = "Petar Petrović",
@@ -185,6 +203,30 @@ namespace NamestajSanin.Migrations
                             Telefon = "061111222",
                             VrstaNamestaja = "Ugaona garnitura"
                         });
+                });
+
+            modelBuilder.Entity("NamestajSanin.Models.StatistikaUcinak", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BrojZavrsenihNarudzbi")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UkupnoZavrsenihZadataka")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ZaposleniId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ZaposleniId");
+
+                    b.ToTable("StatistikaUcinak");
                 });
 
             modelBuilder.Entity("NamestajSanin.Models.Zadatak", b =>
@@ -221,23 +263,23 @@ namespace NamestajSanin.Migrations
                         {
                             Id = 1,
                             FazaId = 1,
-                            Opis = "Obrada rama",
+                            Opis = "Secenje",
                             Status = "nije_poceto",
-                            ZaposleniId = 1
+                            ZaposleniId = 2
                         },
                         new
                         {
                             Id = 2,
                             FazaId = 2,
-                            Opis = "Farbanje konstrukcije",
+                            Opis = "Lepljenje konstrukcije",
                             Status = "nije_poceto",
-                            ZaposleniId = 1
+                            ZaposleniId = 3
                         },
                         new
                         {
                             Id = 3,
                             FazaId = 3,
-                            Opis = "Krojenje materijala",
+                            Opis = "Sklapanje delova",
                             Status = "nije_poceto",
                             ZaposleniId = 2
                         },
@@ -245,25 +287,41 @@ namespace NamestajSanin.Migrations
                         {
                             Id = 4,
                             FazaId = 4,
-                            Opis = "Šivenje jastuka",
+                            Opis = "Farbanje konstrukcije",
                             Status = "nije_poceto",
-                            ZaposleniId = 2
+                            ZaposleniId = 3
                         },
                         new
                         {
                             Id = 5,
                             FazaId = 5,
-                            Opis = "Tapaciranje rama",
+                            Opis = "Krojenje materijala",
                             Status = "nije_poceto",
-                            ZaposleniId = 2
+                            ZaposleniId = 1
                         },
                         new
                         {
                             Id = 6,
                             FazaId = 6,
+                            Opis = "Šivenje jastuka",
+                            Status = "nije_poceto",
+                            ZaposleniId = 4
+                        },
+                        new
+                        {
+                            Id = 7,
+                            FazaId = 7,
+                            Opis = "Tapaciranje nameštaja",
+                            Status = "nije_poceto",
+                            ZaposleniId = 5
+                        },
+                        new
+                        {
+                            Id = 8,
+                            FazaId = 8,
                             Opis = "Pakovanje i zaštita",
                             Status = "nije_poceto",
-                            ZaposleniId = 2
+                            ZaposleniId = 1
                         });
                 });
 
@@ -292,13 +350,31 @@ namespace NamestajSanin.Migrations
                         new
                         {
                             Id = 1,
+                            Ime = "Sako",
+                            Pozicija = "Tapetar"
+                        },
+                        new
+                        {
+                            Id = 2,
                             Ime = "Gile",
                             Pozicija = "Stolar"
                         },
                         new
                         {
-                            Id = 2,
-                            Ime = "Sako",
+                            Id = 3,
+                            Ime = "Selver",
+                            Pozicija = "Stolar"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Ime = "Mirzel",
+                            Pozicija = "Tapetar"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Ime = "Mila",
                             Pozicija = "Tapetar"
                         });
                 });
@@ -312,6 +388,17 @@ namespace NamestajSanin.Migrations
                         .IsRequired();
 
                     b.Navigation("Narudzba");
+                });
+
+            modelBuilder.Entity("NamestajSanin.Models.StatistikaUcinak", b =>
+                {
+                    b.HasOne("NamestajSanin.Models.Zaposleni", "Zaposleni")
+                        .WithMany()
+                        .HasForeignKey("ZaposleniId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Zaposleni");
                 });
 
             modelBuilder.Entity("NamestajSanin.Models.Zadatak", b =>
