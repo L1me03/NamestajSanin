@@ -5,6 +5,7 @@ using NamestajSanin.Models;
 
 namespace NamestajSanin.Controllers
 {
+    //Api kontroler za zaposlene
     [ApiController]
     [Route("api/[controller]")]
     public class ZaposleniController : ControllerBase
@@ -16,14 +17,14 @@ namespace NamestajSanin.Controllers
             _context = context;
         }
 
-        // GET svi zaposleni
+        // Vraca sve zaposlene
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Zaposleni>>> Get()
         {
             return await _context.Zaposleni.ToListAsync();
         }
 
-        // GET jedan po ID
+        // Vraca zaposlenog po ID-u
         [HttpGet("{id}")]
         public async Task<ActionResult<Zaposleni>> GetById(int id)
         {
@@ -32,7 +33,7 @@ namespace NamestajSanin.Controllers
             return zaposleni;
         }
 
-        // POST novi zaposleni
+        // Dodaje novog zaposlenog
         [HttpPost]
         public async Task<ActionResult<Zaposleni>> Create(Zaposleni z)
         {
@@ -41,7 +42,7 @@ namespace NamestajSanin.Controllers
             return CreatedAtAction(nameof(GetById), new { id = z.Id }, z);
         }
 
-        // PUT (izmena)
+        // Modifikuje postojećeg zaposlenog
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, Zaposleni z)
         {
@@ -52,7 +53,7 @@ namespace NamestajSanin.Controllers
             return NoContent();
         }
 
-        // DELETE
+        // Brise zaposlenog iz sistema
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

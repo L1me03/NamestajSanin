@@ -5,6 +5,7 @@ using NamestajSanin.Models;
 
 namespace NamestajSanin.Controllers
 {
+    // Kontroler za upravljanje zadacima unutar faza
     [ApiController]
     [Route("api/[controller]")]
     public class ZadatakController : ControllerBase
@@ -16,7 +17,8 @@ namespace NamestajSanin.Controllers
             _context = context;
         }
 
-        // GET svi zadaci
+      
+        // Dobavlja sve zadatke
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Zadatak>>> Get()
         {
@@ -26,7 +28,7 @@ namespace NamestajSanin.Controllers
                 .ToListAsync();
         }
 
-        // GET po ID
+        // Dobavlja sve zadatke po ID-u faze         
         [HttpGet("{id}")]
         public async Task<ActionResult<Zadatak>> GetById(int id)
         {
@@ -39,7 +41,7 @@ namespace NamestajSanin.Controllers
             return zadatak;
         }
 
-        // POST novi zadatak
+        // Postavljanje novog zadatka 
         [HttpPost]
         public async Task<ActionResult<Zadatak>> Create(Zadatak z)
         {
@@ -48,7 +50,7 @@ namespace NamestajSanin.Controllers
             return CreatedAtAction(nameof(GetById), new { id = z.Id }, z);
         }
 
-        // PATCH status ažuriranje
+        // Azuriranje statusa zadatka
         [HttpPatch("{id}/status")]
         public async Task<IActionResult> UpdateStatus(int id, [FromBody] string status)
         {

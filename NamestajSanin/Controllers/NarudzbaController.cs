@@ -2,9 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using NamestajSanin.Data;
 using NamestajSanin.Models;
+using NamestajSanin.Models.DTOs;
 
 namespace NamestajSanin.Controllers
 {
+
+    // API kontroler za upravljanje narudzbama (za klijenta i menadzera)
     [ApiController]
     [Route("api/[controller]")]
     public class NarudzbaController : ControllerBase
@@ -16,6 +19,7 @@ namespace NamestajSanin.Controllers
             _context = context;
         }
 
+        // Pregled svih narudzbi sa fazama (za menadzera)
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Narudzba>>> GetNarudzbe()
         {
@@ -28,6 +32,8 @@ namespace NamestajSanin.Controllers
             return narudzbe;
         }
 
+           
+        // Dohvacanje jedne narudzbe za menadzera po ID-u 
         [HttpGet("{id}")]
         public async Task<ActionResult<Narudzba>> GetNarudzba(int id)
         {
@@ -40,6 +46,8 @@ namespace NamestajSanin.Controllers
             return narudzba;
         }
 
+
+        // Kreiranje narudzbe za klijente
         [HttpPost]
         public async Task<ActionResult<Narudzba>> Create(Narudzba narudzba)
         {
@@ -48,6 +56,7 @@ namespace NamestajSanin.Controllers
             return CreatedAtAction(nameof(GetNarudzba), new { id = narudzba.Id }, narudzba);
         }
 
+        // Azuriranje statusa narudzbe uz pomoc faze, sinhronizacija statusa izmedju Faza.cs i Narudzba.cs
         private void AzurirajStatusINarudzbe(Narudzba narudzba)
         {
             if (narudzba.Faze == null || narudzba.Faze.Count == 0)
@@ -68,5 +77,30 @@ namespace NamestajSanin.Controllers
 
             _context.SaveChanges(); // ažurira bazu
         }
+
+
+        // Pregled statusa narudzbe za klijente + poziv metode AzurirajStatusNarudzbe
+        [HttpGet("Status/{id}")]
+        public async Task<ActionResult<NarudzbaStatusDto>> GetStatus(int id)
+        {
+            var narudzba = await _context.Narudzbe
+                .Include(n => n.Faze)
+                .FirstOrDefaultAsync(n => n.Id == id);
+
+            if (narudzba == null)
+                return NotFound();
+
+            AzurirajStatusINarudzbe(narudzba);
+
+            var result = new NarudzbaStatusDto
+            {
+                Status = narudzba.Status,
+                DanaDoZavrsetka = narudzba.DanaDoZavrsetka
+            };
+
+            return Ok(result);
+        }
+
     }
 }
+

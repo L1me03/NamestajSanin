@@ -11,9 +11,11 @@ namespace NamestajSanin.Models
         [Required]
         public string Naziv { get; set; }
 
-        public int Trajanje { get; set; } // u danima
+        public int Trajanje { get; set; } 
 
-        public DateTime? Pocetak { get; set; } // može biti null dok ne počne
+        public int Redosled { get; set; } // Redosled faze u procesu
+
+        public DateTime? Pocetak { get; set; } 
 
         [Required]
         public string Status { get; set; } = "nije_poceto"; // "nije_poceto", "u_toku", "zavrsena"
@@ -22,6 +24,6 @@ namespace NamestajSanin.Models
         public int NarudzbaId { get; set; }
         public Narudzba? Narudzba { get; set; }
 
-        public List<Zadatak>? Zadaci { get; set; } = new();
+        public List<Zadatak>? Zadaci { get; set; } = new(); // Konekcija sa Zadatak modelom
     }
 }
