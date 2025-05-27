@@ -16,7 +16,7 @@ namespace NamestajSanin.Models
         public string VrstaNamestaja { get; set; }
 
         [Required]
-        [[MaxLength(50)]
+        [MaxLength(50)]
         public string Dimenzije { get; set; }
 
         [Required]
