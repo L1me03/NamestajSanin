@@ -12,24 +12,30 @@ namespace NamestajSanin.Models
         public DateTime Datum { get; set; } = DateTime.UtcNow;
 
         [Required]
+        [MaxLength(50)]
         public string VrstaNamestaja { get; set; }
 
         [Required]
+        [[MaxLength(50)]
         public string Dimenzije { get; set; }
 
         [Required]
+        [MaxLength(50)]
         public string Materijal { get; set; }
         
         [Required]
+        [MaxLength(20)]
         public string? Boja { get; set; }
 
         [Required]
         public string KontaktIme { get; set; }
 
         [Required]
+        [Phone]
         public string Telefon { get; set; }
 
         [Required]
+        [EmailAddress]
         public string Email { get; set; }
 
         public string Status { get; set; } = "nije_poceto"; // automatski ažuriran

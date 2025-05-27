@@ -4,12 +4,15 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using NamestajSanin.Data;
 using NamestajSanin.Services;
+using System.Text.Json.Serialization;
+using NamestajSanin.Middleware;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.WebHost.UseUrls("http://*:80");
 
-// ✅ Registracija baze
+// Registracija baze
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
@@ -17,14 +20,21 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     )
 );
 
-// ✅ Dodaj ostale servise
-builder.Services.AddControllers();
+// Enum u string
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); 
+    });
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<StatusService>();
 
 var app = builder.Build();
 
-builder.Services.AddScoped<StatusService>();
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseSwagger();
 app.UseSwaggerUI();

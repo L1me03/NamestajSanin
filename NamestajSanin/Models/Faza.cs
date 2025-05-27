@@ -10,8 +10,8 @@ namespace NamestajSanin.Models
 
         [Required]
         public string Naziv { get; set; }
-
-        public int Trajanje { get; set; } 
+        [Range(1, 365, ErrorMessage = "Trajanje mora biti između 1 i 365 dana.")]
+        public int Trajanje { get; set; } //u danima
 
         public int Redosled { get; set; } // Redosled faze u procesu
 

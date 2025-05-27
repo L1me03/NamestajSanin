@@ -8,9 +8,10 @@ namespace NamestajSanin.Models
         public int Id { get; set; }
 
         [Required]
+        [MaxLength(100)]
         public string Ime { get; set; }
-
-        public PozicijaTip Pozicija { get; set; }
+        [Required]
+        public PozicijaTip Pozicija { get; set; } //koristi enum
 
         public List<Zadatak>? Zadaci { get; set; } = new();
 
