@@ -10,6 +10,8 @@ services:
     ports:
       - "3306:3306"
     command: --bind-address=0.0.0.0
+    volumes:
+      - mariadb_data:/var/lib/mysql  
     networks:
       - app-network
 
@@ -29,12 +31,15 @@ services:
     container_name: ef-cli
     working_dir: /app/NamestajSanin
     volumes:
-      - .:/app
+      - .:/app  
     entrypoint: ["tail", "-f", "/dev/null"]
     networks:
       - app-network
     depends_on:
       - mariadb
+
+volumes:
+  mariadb_data:
 
 networks:
   app-network:

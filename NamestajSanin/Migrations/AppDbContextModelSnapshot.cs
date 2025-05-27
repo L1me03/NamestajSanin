@@ -190,7 +190,7 @@ namespace NamestajSanin.Migrations
                         {
                             Id = 1,
                             Boja = "Siva",
-                            Datum = new DateTime(2025, 5, 27, 14, 31, 33, 662, DateTimeKind.Utc).AddTicks(4209),
+                            Datum = new DateTime(2025, 5, 27, 17, 7, 13, 979, DateTimeKind.Utc).AddTicks(9828),
                             Dimenzije = "250x180",
                             Email = "petar@example.com",
                             KontaktIme = "Petar Petrović",

@@ -6,9 +6,11 @@ using NamestajSanin.Data;
 using NamestajSanin.Services;
 using System.Text.Json.Serialization;
 using NamestajSanin.Middleware;
+using PdfSharpCore.Fonts;
 
 
 var builder = WebApplication.CreateBuilder(args);
+GlobalFontSettings.FontResolver = new FontResolverSans();
 
 builder.WebHost.UseUrls("http://*:80");
 
@@ -27,19 +29,20 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); 
     });
 
-
+builder.Services.AddScoped<PdfService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<StatusService>();
 
 var app = builder.Build();
 
+// Middleware
 app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseSwagger();
 app.UseSwaggerUI();
 
-// ✅ Middleware
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

@@ -10,7 +10,12 @@ RUN dotnet publish NamestajSanin.csproj -c Release -o out --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
-COPY --from=build /app/out .
+
+# Kopiraa build output + logo u runtime image
+COPY --from=build /app/out . 
+COPY LiberationSans-Regular.ttf ./LiberationSans-Regular.ttf
+COPY logo.jpg ./logo.jpg
+
 EXPOSE 80
 ENV ASPNETCORE_URLS=http://+:80
 

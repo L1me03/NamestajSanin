@@ -4,6 +4,7 @@ using NamestajSanin.Data;
 using NamestajSanin.Models;
 using NamestajSanin.Models.DTOs;
 using NamestajSanin.Services;
+using PdfSharpCore;
 
 namespace NamestajSanin.Controllers
 {
@@ -124,5 +125,18 @@ namespace NamestajSanin.Controllers
 
             await _context.SaveChangesAsync();
         }
+
+        [HttpGet("{id}/pdf")]
+        public IActionResult GetNarudzbaPdf(int id, [FromServices] PdfService pdfService, [FromServices] AppDbContext context)
+        {
+            var narudzba = context.Narudzbe.FirstOrDefault(n => n.Id == id);
+
+            if (narudzba == null)
+                return NotFound("Narudžba nije pronađena.");
+
+            var pdfBytes = pdfService.GenerateNarudzbaPdf(narudzba);
+            return File(pdfBytes, "application/pdf", $"Narudzba_{id}.pdf");
+        }
+
     }
 }
